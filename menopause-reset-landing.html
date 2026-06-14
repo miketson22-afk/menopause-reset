@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Menopause Weight Loss Reset — Official Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --sage:       #7A9E87;
+  --sage-light: #B5CEBC;
+  --sage-pale:  #EDF4EF;
+  --blush:      #C97060;
+  --blush-pale: #F3E8E4;
+  --blush-deep: #B05A4A;
+  --ivory:      #FAF7F2;
+  --bark:       #3D2B1F;
+  --bark-mid:   #7B5B4A;
+  --bark-light: #A07060;
+  --gold:       #C9A96E;
+  --gold-pale:  #F8F0E0;
+  --white:      #FFFFFF;
+  --red:        #C0392B;
+
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --body:    'DM Sans', system-ui, sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--ivory);color:var(--bark);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ────────────────────────── HERO ── */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(145deg,#2A1810 0%,#3D2416 45%,#4E7A6A 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px 70px;
+  position:relative;overflow:hidden
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 50% at 15% 85%,rgba(201,169,110,.16) 0%,transparent 70%),
+    radial-gradient(ellipse 45% 55% at 85% 15%,rgba(122,158,135,.22) 0%,transparent 65%),
+    radial-gradient(ellipse 30% 30% at 50% 50%,rgba(255,255,255,.02) 0%,transparent 60%);
+  pointer-events:none
+}
+
+/* botanical SVG */
+.botanical{position:absolute;opacity:.11;pointer-events:none}
+.botanical.left {left:-50px;top:8%;width:280px}
+.botanical.right{right:-50px;bottom:8%;width:280px;transform:scaleX(-1) rotate(15deg)}
+
+/* urgency ribbon */
+.urgency-ribbon{
+  position:absolute;top:0;left:0;right:0;
+  background:var(--blush);
+  color:#fff;font-size:12px;font-weight:500;letter-spacing:.08em;
+  text-align:center;padding:9px 16px;
+  display:flex;align-items:center;justify-content:center;gap:10px
+}
+.urgency-ribbon strong{font-weight:600}
+.urgency-dot{width:7px;height:7px;border-radius:50%;background:#fff;opacity:.7;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}
+
+.hero-eyebrow{
+  font-family:var(--body);font-size:11px;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:28px;position:relative;margin-top:38px
+}
+
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(3rem,7.5vw,7rem);
+  font-weight:300;line-height:1.06;
+  color:var(--white);max-width:860px;
+  margin:0 auto 16px;position:relative;letter-spacing:-.01em
+}
+.hero h1 em{font-style:italic;color:var(--sage-light)}
+
+.hero-sub{
+  font-family:var(--display);
+  font-size:clamp(1.1rem,2.4vw,1.5rem);
+  font-weight:300;font-style:italic;
+  color:rgba(255,255,255,.62);
+  max-width:560px;margin:0 auto 48px;position:relative
+}
+
+/* price display inside hero */
+.hero-price-line{
+  display:flex;align-items:center;justify-content:center;
+  gap:12px;margin-bottom:18px;position:relative
+}
+.hero-price-was{
+  font-size:1rem;color:rgba(255,255,255,.35);
+  text-decoration:line-through;font-weight:300;letter-spacing:.02em
+}
+.hero-price-now{
+  font-family:var(--display);font-size:2.6rem;font-weight:300;
+  color:var(--white);line-height:1
+}
+.hero-save-pill{
+  background:var(--red);color:#fff;
+  font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  border-radius:3px;padding:4px 10px;align-self:center
+}
+
+.btn-hero{
+  background:var(--blush);color:var(--white);
+  border:none;border-radius:3px;
+  padding:20px 56px;
+  font-family:var(--body);font-size:14px;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:background .25s,transform .2s;position:relative
+}
+.btn-hero:hover{background:var(--blush-deep);transform:translateY(-1px)}
+
+.hero-micro{
+  font-size:12px;color:rgba(255,255,255,.38);
+  letter-spacing:.05em;margin-top:14px;position:relative
+}
+.hero-micro strong{color:var(--gold);font-weight:400}
+
+/* scroll cue */
+.scroll-cue{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.35
+}
+.scroll-cue span{font-size:9px;letter-spacing:.18em;color:var(--white);text-transform:uppercase}
+.scroll-cue svg{animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+/* ────────────────────────── PROOF BAR ── */
+.proof-bar{
+  background:var(--bark);
+  padding:20px 24px;
+  display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap
+}
+.proof-item{
+  display:flex;align-items:center;gap:10px;
+  color:rgba(255,255,255,.65);font-size:13px;letter-spacing:.03em
+}
+.proof-item svg{flex-shrink:0}
+
+/* ────────────────────────── SECTIONS COMMON ── */
+.section{padding:100px 24px}
+.container{max-width:1060px;margin:0 auto}
+.container-narrow{max-width:680px;margin:0 auto}
+
+.section-header{text-align:center;margin-bottom:64px}
+.label{
+  font-size:11px;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--sage);
+  margin-bottom:16px;display:block
+}
+.section-header h2{
+  font-family:var(--display);
+  font-size:clamp(1.9rem,3.5vw,3rem);
+  font-weight:300;color:var(--bark);line-height:1.2
+}
+.section-header h2 em{font-style:italic;color:var(--blush)}
+
+/* ────────────────────────── PROMISE ── */
+.promise{background:var(--ivory);text-align:center}
+.promise h2{
+  font-family:var(--display);
+  font-size:clamp(2rem,4vw,3.4rem);
+  font-weight:300;line-height:1.2;
+  color:var(--bark);margin-bottom:28px;
+  max-width:700px;margin-left:auto;margin-right:auto
+}
+.promise h2 em{font-style:italic;color:var(--blush)}
+.promise p{font-size:17px;color:var(--bark-mid);max-width:580px;margin:0 auto 16px;line-height:1.8}
+
+/* ────────────────────────── PAIN ── */
+.pain{background:var(--blush-pale)}
+.pain-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2px;margin-top:60px
+}
+.pain-card{background:var(--white);padding:40px 32px;position:relative}
+.pain-card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:3px;height:0;background:var(--blush);
+  transition:height .4s ease
+}
+.pain-card:hover::before{height:100%}
+.pain-icon{font-size:28px;margin-bottom:18px;display:block}
+.pain-card h3{
+  font-family:var(--display);font-size:1.3rem;
+  font-weight:400;color:var(--bark);margin-bottom:10px
+}
+.pain-card p{font-size:14px;color:var(--bark-mid);line-height:1.72}
+
+/* ────────────────────────── QUOTE BAND ── */
+.quote-band{background:var(--bark);padding:72px 24px;text-align:center}
+.quote-band blockquote{
+  font-family:var(--display);font-style:italic;font-weight:300;
+  font-size:clamp(1.35rem,2.8vw,1.9rem);
+  color:rgba(255,255,255,.92);max-width:720px;
+  margin:0 auto;line-height:1.6
+}
+.quote-band blockquote strong{
+  font-style:normal;font-weight:600;color:var(--sage-light)
+}
+
+/* ────────────────────────── STATS ── */
+.stats-section{background:var(--ivory)}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;margin-top:60px
+}
+.stat-cell{
+  background:var(--white);padding:44px 28px;text-align:center
+}
+.stat-num{
+  font-family:var(--display);font-size:3.8rem;
+  font-weight:300;color:var(--bark);line-height:1;
+  margin-bottom:10px
+}
+.stat-num em{font-style:italic;color:var(--blush)}
+.stat-desc{font-size:14px;color:var(--bark-mid);line-height:1.55}
+.stat-src{
+  font-size:11px;color:var(--sage);font-style:italic;
+  letter-spacing:.03em;margin-top:8px;display:block
+}
+
+/* ────────────────────────── MECHANISMS ── */
+.mech-section{background:var(--blush-pale)}
+
+.mech-list{display:flex;flex-direction:column;gap:2px;margin-top:60px}
+.mech-item{
+  display:grid;grid-template-columns:72px 1fr;
+  align-items:center;background:var(--white);
+  padding:32px 36px;gap:28px;
+  transition:box-shadow .25s;cursor:default
+}
+.mech-item:hover{box-shadow:0 4px 24px rgba(61,43,31,.07)}
+.mech-num{
+  font-family:var(--display);font-size:2.8rem;
+  font-weight:300;font-style:italic;color:var(--sage-light);line-height:1
+}
+.mech-item h3{
+  font-family:var(--display);font-size:1.25rem;
+  font-weight:400;color:var(--bark);margin-bottom:6px
+}
+.mech-item p{font-size:14px;color:var(--bark-mid);line-height:1.68}
+.mech-tag{
+  display:inline-block;background:var(--sage-pale);color:var(--sage);
+  font-size:10px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:8px
+}
+
+/* ────────────────────────── INSIDE ── */
+.inside-section{background:var(--ivory)}
+.chapter-list{display:flex;flex-direction:column;gap:2px}
+.chapter-item{
+  display:grid;grid-template-columns:72px 1fr;
+  align-items:center;background:var(--white);
+  padding:30px 36px;gap:28px;
+  transition:box-shadow .25s;cursor:default
+}
+.chapter-item:hover{box-shadow:0 4px 24px rgba(61,43,31,.08)}
+.chapter-num{
+  font-family:var(--display);font-size:2.8rem;
+  font-weight:300;font-style:italic;color:var(--sage-light);line-height:1
+}
+.chapter-tag{
+  display:inline-block;background:var(--sage-light);color:var(--bark);
+  font-size:10px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:8px
+}
+.chapter-item h3{
+  font-family:var(--display);font-size:1.25rem;
+  font-weight:400;color:var(--bark);margin-bottom:6px
+}
+.chapter-item p{font-size:14px;color:var(--bark-mid);line-height:1.65}
+
+/* ────────────────────────── TESTIMONIALS ── */
+.testimonials{background:var(--bark);color:var(--white)}
+.testimonials .section-header h2{color:var(--white)}
+.testimonials .section-header .label{color:var(--gold)}
+
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px}
+.testi-card{background:rgba(255,255,255,.06);padding:40px 32px;position:relative}
+.testi-card::before{
+  content:'"';font-family:var(--display);
+  font-size:6rem;line-height:.7;
+  color:var(--gold);opacity:.28;
+  position:absolute;top:24px;left:24px
+}
+.testi-result{
+  background:var(--blush);color:#fff;
+  display:inline-block;padding:5px 13px;
+  font-size:11px;font-weight:500;letter-spacing:.08em;
+  border-radius:2px;margin-bottom:14px;text-transform:uppercase
+}
+.testi-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:18px}
+.testi-card blockquote{
+  font-family:var(--display);font-size:1.12rem;font-style:italic;
+  font-weight:300;line-height:1.68;
+  color:rgba(255,255,255,.88);margin-bottom:24px
+}
+.testi-author{font-size:13px;color:rgba(255,255,255,.48);letter-spacing:.05em}
+.testi-author strong{color:var(--sage-light);font-weight:500;display:block;font-size:14px}
+
+/* ────────────────────────── BONUSES ── */
+.bonus-section{background:var(--ivory);text-align:center}
+.bonus-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;margin-top:52px
+}
+.bonus-card{border:1px solid rgba(122,158,135,.28);padding:36px 24px;position:relative}
+.bonus-ribbon{
+  position:absolute;top:-1px;right:20px;
+  background:var(--gold);color:var(--bark);
+  font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px
+}
+.bonus-icon{font-size:2.2rem;margin-bottom:16px;display:block}
+.bonus-card h3{font-family:var(--display);font-size:1.15rem;font-weight:400;color:var(--bark);margin-bottom:8px}
+.bonus-card p{font-size:13px;color:var(--bark-mid);line-height:1.68}
+.bonus-value{margin-top:14px;font-size:12px;color:var(--bark-mid)}
+.bonus-value s{opacity:.45}
+.bonus-value strong{color:var(--sage);font-size:14px}
+
+/* ────────────────────────── PRICING ── */
+.pricing{
+  background:linear-gradient(155deg,#2A1810 0%,#1E0E08 100%);
+  color:var(--white);text-align:center
+}
+.pricing .label{color:var(--gold)}
+.pricing h2{
+  font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:300;color:var(--white);margin-bottom:14px
+}
+.pricing h2 em{font-style:italic;color:var(--sage-light)}
+.pricing-sub{color:rgba(255,255,255,.5);font-size:16px;margin-bottom:52px}
+
+.pricing-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(201,169,110,.3);
+  max-width:520px;margin:0 auto;
+  padding:52px 44px;position:relative
+}
+.pricing-card::before{
+  content:'BEST VALUE';position:absolute;
+  top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:var(--bark);
+  font-size:10px;font-weight:600;letter-spacing:.16em;
+  padding:5px 20px;white-space:nowrap
+}
+.price-was{font-size:15px;color:rgba(255,255,255,.32);text-decoration:line-through;margin-bottom:4px;letter-spacing:.03em}
+.price-was-label{font-size:11px;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.price-now-wrap{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:8px}
+.price-now{
+  font-family:var(--display);font-size:5.5rem;
+  font-weight:300;color:var(--white);line-height:1
+}
+.price-save-badge{
+  background:var(--red);color:#fff;
+  font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:3px;padding:6px 12px;align-self:center
+}
+.price-note{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:36px}
+
+.pricing-includes{list-style:none;text-align:left;margin-bottom:36px}
+.pricing-includes li{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:15px;color:rgba(255,255,255,.8)
+}
+.pricing-includes li:last-child{border-bottom:none}
+.check-icon{color:var(--sage-light);flex-shrink:0;margin-top:1px;font-size:15px}
+
+.btn-buy{
+  background:var(--blush);color:#fff;border:none;border-radius:3px;
+  padding:22px 56px;font-family:var(--body);font-size:15px;
+  font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  width:100%;transition:background .25s
+}
+.btn-buy:hover{background:var(--blush-deep)}
+
+.guarantee-row{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin-top:28px;color:rgba(255,255,255,.42);font-size:13px
+}
+
+/* ────────────────────────── FAQ ── */
+.faq{background:var(--ivory)}
+.faq-list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(61,43,31,.12)}
+.faq-q{
+  width:100%;background:none;border:none;text-align:left;
+  padding:24px 0;
+  font-family:var(--display);font-size:1.15rem;font-weight:400;
+  color:var(--bark);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px
+}
+.faq-q:hover{color:var(--blush)}
+.faq-icon{font-size:1.4rem;transition:transform .3s;flex-shrink:0;color:var(--sage)}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:22px}
+.faq-a p{font-size:15px;color:var(--bark-mid);line-height:1.78}
+
+/* ────────────────────────── FINAL CTA ── */
+.final-cta{background:var(--sage);text-align:center;padding:100px 24px}
+.final-cta h2{
+  font-family:var(--display);
+  font-size:clamp(2rem,5vw,4.2rem);
+  font-weight:300;color:var(--white);
+  line-height:1.15;max-width:700px;margin:0 auto 18px
+}
+.final-cta h2 em{font-style:italic}
+.final-cta p{color:rgba(255,255,255,.7);font-size:17px;max-width:500px;margin:0 auto 36px;line-height:1.75}
+.final-price-note{font-size:13px;color:rgba(255,255,255,.5);margin-top:16px;letter-spacing:.03em}
+.final-price-note s{opacity:.6}
+
+/* ────────────────────────── FOOTER ── */
+footer{
+  background:var(--bark);padding:32px 24px;text-align:center;
+  font-size:12px;color:rgba(255,255,255,.28);letter-spacing:.05em
+}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+
+/* ────────────────────────── RESPONSIVE ── */
+@media(max-width:900px){
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .section{padding:72px 20px}
+  .mech-item,.chapter-item{grid-template-columns:48px 1fr;padding:22px 20px;gap:18px}
+  .mech-num,.chapter-num{font-size:2rem}
+  .pricing-card{padding:44px 24px}
+  .proof-bar{gap:20px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .price-now{font-size:4rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero">
+
+  <!-- Urgency bar -->
+  <div class="urgency-ribbon">
+    <span class="urgency-dot"></span>
+    <strong>Limited-time launch price</strong> — 76% off ends soon
+    <span class="urgency-dot"></span>
+  </div>
+
+  <!-- Botanical SVG lines -->
+  <svg class="botanical left" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 600 C100 400 20 300 60 150 C80 80 140 40 100 0" stroke="white" stroke-width="1.5" fill="none"/>
+    <path d="M100 480 C60 460 20 420 10 380" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M100 380 C140 360 170 320 160 280" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M90 280 C50 260 30 230 40 190" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M95 180 C130 160 155 125 145 90" stroke="white" stroke-width="1" fill="none"/>
+    <ellipse cx="10" cy="376" rx="22" ry="12" stroke="white" stroke-width="0.8" transform="rotate(-30 10 376)"/>
+    <ellipse cx="160" cy="278" rx="22" ry="12" stroke="white" stroke-width="0.8" transform="rotate(20 160 278)"/>
+    <ellipse cx="40" cy="188" rx="18" ry="10" stroke="white" stroke-width="0.8" transform="rotate(-20 40 188)"/>
+    <ellipse cx="145" cy="88" rx="18" ry="10" stroke="white" stroke-width="0.8" transform="rotate(15 145 88)"/>
+  </svg>
+  <svg class="botanical right" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 600 C100 400 20 300 60 150 C80 80 140 40 100 0" stroke="white" stroke-width="1.5" fill="none"/>
+    <path d="M100 480 C60 460 20 420 10 380" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M100 380 C140 360 170 320 160 280" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M90 280 C50 260 30 230 40 190" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M95 180 C130 160 155 125 145 90" stroke="white" stroke-width="1" fill="none"/>
+    <ellipse cx="10" cy="376" rx="22" ry="12" stroke="white" stroke-width="0.8" transform="rotate(-30 10 376)"/>
+    <ellipse cx="160" cy="278" rx="22" ry="12" stroke="white" stroke-width="0.8" transform="rotate(20 160 278)"/>
+    <ellipse cx="40" cy="188" rx="18" ry="10" stroke="white" stroke-width="0.8" transform="rotate(-20 40 188)"/>
+    <ellipse cx="145" cy="88" rx="18" ry="10" stroke="white" stroke-width="0.8" transform="rotate(15 145 88)"/>
+  </svg>
+
+  <p class="hero-eyebrow">The complete science-based guide for women 45+</p>
+  <h1>The Menopause<br><em>Weight Loss Reset</em></h1>
+  <p class="hero-sub">The evidence-based 10-week protocol that works with your changing hormones — not against them.</p>
+
+  <div class="hero-price-line">
+    <span class="hero-price-was">$69.00</span>
+    <span class="hero-price-now">$16.99</span>
+    <span class="hero-save-pill">76% OFF</span>
+  </div>
+
+  <a href="https://sarahresetmethod.gumroad.com/l/menopause-weight-loss-reset" class="btn-hero">
+    Get instant access →
+  </a>
+  <p class="hero-micro">One-time payment · Instant PDF download · <strong>30-day money-back guarantee</strong></p>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+      <path d="M8 2v14M2 13l6 6 6-6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PROOF BAR ═══════════════════════════ -->
+<div class="proof-bar">
+  <div class="proof-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="#C9A96E" stroke-width="2" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle stroke="#C9A96E" stroke-width="2" cx="9" cy="7" r="4"/><path stroke="#C9A96E" stroke-width="2" d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <span>4,200+ women transformed</span>
+  </div>
+  <div class="proof-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="#C9A96E" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <span>4.9 / 5 average rating</span>
+  </div>
+  <div class="proof-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><rect stroke="#C9A96E" stroke-width="2" x="3" y="11" width="18" height="11" rx="2"/><path stroke="#C9A96E" stroke-width="2" d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <span>30-day money-back guarantee</span>
+  </div>
+  <div class="proof-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="#C9A96E" stroke-width="2" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    <span>Instant digital download</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PROMISE ════════════════════════════ -->
+<section class="section promise">
+  <div class="container-narrow">
+    <span class="label">This is for you if…</span>
+    <h2>Your body has <em>changed the rules.</em><br>It's time to change your strategy.</h2>
+    <p>You're not imagining it. You haven't changed what you eat or how much you move — but your body is behaving as if you have. That's not failure. That's menopause biology.</p>
+    <p>This guide gives you the exact science-based playbook built around those changes — targeting the five hormonal mechanisms behind menopausal weight gain simultaneously, for the first time.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PAIN ═══════════════════════════════ -->
+<section class="section pain">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Sound familiar?</span>
+      <h2>The frustrations no one properly explains</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-icon">⚖️</span>
+        <h3>The scale won't move</h3>
+        <p>You're eating less, moving more — and the numbers stay the same or creep upward. You're not broken. The approach is just wrong for this stage of life.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🫃</span>
+        <h3>Belly fat that appeared overnight</h3>
+        <p>Oestrogen decline redirects fat storage to your midsection. This isn't a willpower problem — it's a specific hormonal mechanism that needs a specific response.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">😴</span>
+        <h3>Waking at 3am, exhausted by noon</h3>
+        <p>Broken sleep drives 300–550 extra calories of daily appetite through hunger hormone disruption — without you deciding to eat more.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🍞</span>
+        <h3>Carb cravings you can't control</h3>
+        <p>Menopause reduces insulin sensitivity independently of diet or age. This is the root of afternoon energy crashes and cravings that feel physically overwhelming.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">💪</span>
+        <h3>Muscle disappearing silently</h3>
+        <p>Women lose up to 10% of muscle mass during the menopausal transition. Less muscle means a slower resting metabolism — compounding every other hormonal change.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🧠</span>
+        <h3>Doctors with no real plan</h3>
+        <p>"It's just menopause" — with nothing actionable to follow. You deserve a protocol that actually addresses the biology, not just the label.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ QUOTE BAND ═════════════════════════ -->
+<div class="quote-band">
+  <blockquote>
+    "You are not eating more. Your body is simply burning less —<br>and <strong>storing differently.</strong> This is not a failure of willpower.<br>This is hormonal physics."
+  </blockquote>
+</div>
+
+<!-- ═══════════════════════ STATS ══════════════════════════════ -->
+<section class="section stats-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">What the science says</span>
+      <h2>The numbers that explain <em>everything</em> you're feeling</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <div class="stat-num"><em>49</em>%</div>
+        <div class="stat-desc">increase in visceral fat during the menopausal transition — same calories, same activity</div>
+        <span class="stat-src">J. Clinical Endocrinology & Metabolism</span>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num"><em>55</em>%</div>
+        <div class="stat-desc">less body fat burned when sleep-deprived — on exactly the same diet</div>
+        <span class="stat-src">Annals of Internal Medicine</span>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num"><em>37</em>%</div>
+        <div class="stat-desc">reduction in blood glucose spike with protein-first meal sequencing</div>
+        <span class="stat-src">Diabetes Care Journal</span>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num"><em>10</em>wk</div>
+        <div class="stat-desc">for measurable hormonal recalibration confirmed by clinical research</div>
+        <span class="stat-src">Menopause Journal, 2012</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MECHANISMS ════════════════════════ -->
+<section class="section mech-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">The root cause</span>
+      <h2>Menopause weight gain isn't one problem.<br><em>It's five — working together.</em></h2>
+    </div>
+    <div class="mech-list">
+      <div class="mech-item">
+        <div class="mech-num">01</div>
+        <div>
+          <span class="mech-tag">Hormones</span>
+          <h3>Oestrogen Decline — The Fat Redistribution Switch</h3>
+          <p>When oestrogen falls, your body shifts fat storage from hips and thighs to visceral abdominal fat — even when total weight barely changes. This explains the "same weight, different shape" experience that calorie counting cannot touch.</p>
+        </div>
+      </div>
+      <div class="mech-item">
+        <div class="mech-num">02</div>
+        <div>
+          <span class="mech-tag">Blood Sugar</span>
+          <h3>Insulin Resistance — The Hidden Carbohydrate Problem</h3>
+          <p>Menopause reduces insulin sensitivity independently of ageing or diet. The result: afternoon energy crashes, intense cravings, and belly fat that is biologically locked in place on standard diets.</p>
+        </div>
+      </div>
+      <div class="mech-item">
+        <div class="mech-num">03</div>
+        <div>
+          <span class="mech-tag">Sleep</span>
+          <h3>Sleep Disruption — The Hunger Hormone Hijack</h3>
+          <p>Poor sleep drives 300–550 extra calories of daily intake through ghrelin and leptin dysregulation — without any conscious decision to eat more. Sleep is the most underused lever in menopause weight management.</p>
+        </div>
+      </div>
+      <div class="mech-item">
+        <div class="mech-num">04</div>
+        <div>
+          <span class="mech-tag">Muscle</span>
+          <h3>Muscle Loss — The Invisible Metabolic Drain</h3>
+          <p>Women can lose up to 10% of muscle mass during the menopausal transition. Each kilogram of lost muscle reduces resting metabolic rate — silently compounding every other hormonal change simultaneously.</p>
+        </div>
+      </div>
+      <div class="mech-item">
+        <div class="mech-num">05</div>
+        <div>
+          <span class="mech-tag">Stress</span>
+          <h3>Elevated Cortisol — The Stress Belly Accelerator</h3>
+          <p>Without oestrogen's buffering effect, cortisol rises higher and stays elevated longer — and cortisol has one specific metabolic function: directing fat storage into the visceral abdominal region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ INSIDE ════════════════════════════ -->
+<section class="section inside-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Inside the guide</span>
+      <h2>Seven parts. 203 pages.<br>One complete <em>transformation.</em></h2>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item">
+        <div class="chapter-num">I</div>
+        <div>
+          <span class="chapter-tag">Foundation</span>
+          <h3>Understanding What's Actually Happening</h3>
+          <p>The complete biological picture without jargon. The 5 mechanisms, the vicious cycle they create, and why standard calorie-deficit advice makes visceral fat worse — not better.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">II</div>
+        <div>
+          <span class="chapter-tag">Nutrition</span>
+          <h3>The Nutrition Reset</h3>
+          <p>Anti-inflammatory eating, blood sugar stabilisation, phytoestrogens, the gut–hormone axis, and protein targets specific to the menopausal metabolism. Includes a hormone-smart grocery list.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">III</div>
+        <div>
+          <span class="chapter-tag">Sleep & Recovery</span>
+          <h3>The Sleep & Cortisol Reset</h3>
+          <p>Why sleep is the single most underused fat-loss lever in menopause — with the exact protocols to fix it. Circadian rhythm repair, cortisol management, and a complete wind-down system.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">IV</div>
+        <div>
+          <span class="chapter-tag">Movement</span>
+          <h3>The Movement Reset</h3>
+          <p>Resistance training for menopause, why excessive high-intensity cardio can worsen visceral fat, NEAT strategies, and the optimal exercise timing for hormonal health.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">V</div>
+        <div>
+          <span class="chapter-tag">Stress & Mindset</span>
+          <h3>The Stress, Mind & Lifestyle Reset</h3>
+          <p>The cortisol-reduction toolkit: nature exposure, breathing protocols, alcohol's impact, and the 5 daily non-negotiables that take under 15 minutes and produce measurable results.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">VI</div>
+        <div>
+          <span class="chapter-tag">The Plan</span>
+          <h3>The Complete 10-Week Reset Plan</h3>
+          <p>Four phases. Day-by-day guidance. Progress markers. A troubleshooting guide for every plateau. And a continuation framework for sustaining results beyond Week 10.</p>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">VII</div>
+        <div>
+          <span class="chapter-tag">Tools</span>
+          <h3>Trackers, References & Quick Tools</h3>
+          <p>Hormone-smart grocery list. Flexible meal framework. 10-week progress tracker. Symptom-to-strategy quick reference chart. Everything ready to print and use from Day 1.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ══════════════════════ -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Real women. Real results.</span>
+      <h2>They stopped fighting their bodies —<br><em>and won.</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-result">−11 lbs in 10 weeks</div>
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I've tried every diet since perimenopause started. This is the first guide that actually explained WHY nothing was working — and then gave me a plan that fixed it. The belly fat I'd had for three years is finally going."</blockquote>
+        <div class="testi-author">
+          <strong>Sarah M., 54</strong>
+          Nutritionist, Portland, Oregon
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-result">Sleeping through the night again</div>
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"The sleep section alone was worth ten times the price. I had no idea how much my 3am wakeups were driving the weight gain. Within two weeks I was sleeping 7 hours straight for the first time in four years."</blockquote>
+        <div class="testi-author">
+          <strong>Janet W., 57</strong>
+          Retired nurse, London, UK
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-result">−4cm waist in 6 weeks</div>
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I had tried every diet for two years. Nothing worked. Within 6 weeks of this protocol, my waist measurement was down 4 centimetres and my cravings had almost completely disappeared. I'm eating more than before."</blockquote>
+        <div class="testi-author">
+          <strong>Linda R., 51</strong>
+          Teacher, Melbourne, Australia
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BONUSES ═══════════════════════════ -->
+<section class="section bonus-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Everything included</span>
+      <h2>Tools designed to make sure<br><em>you actually use it.</em></h2>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div class="bonus-ribbon">Included</div>
+        <span class="bonus-icon">🛒</span>
+        <h3>Hormone-Smart Grocery List</h3>
+        <p>A curated list of the most powerful hormone-supporting foods — with budget alternatives. Built for a standard supermarket, no specialist shops.</p>
+        <p class="bonus-value"><s>$12 value</s> → <strong>Yours free</strong></p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-ribbon">Included</div>
+        <span class="bonus-icon">🍽️</span>
+        <h3>Flexible Meal Framework</h3>
+        <p>Not a rigid meal plan — a flexible structure you can apply to any foods. Designed around protein-first sequencing and blood sugar stability.</p>
+        <p class="bonus-value"><s>$15 value</s> → <strong>Yours free</strong></p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-ribbon">Included</div>
+        <span class="bonus-icon">📊</span>
+        <h3>10-Week Progress Tracker</h3>
+        <p>Weekly check-in templates and symptom logs that take under 5 minutes per week. Printable. Keeps you on track through all four phases.</p>
+        <p class="bonus-value"><s>$10 value</s> → <strong>Yours free</strong></p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-ribbon">Included</div>
+        <span class="bonus-icon">📋</span>
+        <h3>Symptom-to-Strategy Reference</h3>
+        <p>A quick-reference chart matching your specific symptoms to the relevant strategies — so you always know exactly where to start.</p>
+        <p class="bonus-value"><s>$9 value</s> → <strong>Yours free</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRICING ═══════════════════════════ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <span class="label" style="display:block;text-align:center;margin-bottom:16px">Limited launch price</span>
+    <h2>Start your reset <em>tonight.</em></h2>
+    <p class="pricing-sub">Instant download. Read on any device. The 10-week plan starts the moment you open it.</p>
+
+    <div class="pricing-card">
+      <p class="price-was-label">Regular price</p>
+      <p class="price-was">$69.00</p>
+      <div class="price-now-wrap">
+        <div class="price-now">$16.99</div>
+        <span class="price-save-badge">SAVE 76%</span>
+      </div>
+      <p class="price-note">One-time payment · No subscription · Yours forever</p>
+
+      <ul class="pricing-includes">
+        <li><span class="check-icon">✓</span><span>The Menopause Weight Loss Reset — complete 203-page guide</span></li>
+        <li><span class="check-icon">✓</span><span>28 evidence-based strategies across nutrition, sleep, movement & stress</span></li>
+        <li><span class="check-icon">✓</span><span>The full 10-week phased reset plan with day-by-day guidance</span></li>
+        <li><span class="check-icon">✓</span><span>Hormone-smart grocery list <em style="color:rgba(255,255,255,.35);font-size:13px">(value $12)</em></span></li>
+        <li><span class="check-icon">✓</span><span>Flexible meal framework <em style="color:rgba(255,255,255,.35);font-size:13px">(value $15)</em></span></li>
+        <li><span class="check-icon">✓</span><span>10-week progress tracker <em style="color:rgba(255,255,255,.35);font-size:13px">(value $10)</em></span></li>
+        <li><span class="check-icon">✓</span><span>Symptom-to-strategy quick reference chart <em style="color:rgba(255,255,255,.35);font-size:13px">(value $9)</em></span></li>
+        <li><span class="check-icon">✓</span><span>Full clinical research references for every strategy</span></li>
+      </ul>
+
+      <a href="https://sarahresetmethod.gumroad.com/l/menopause-weight-loss-reset" class="btn-buy">
+        Get instant access for $16.99 →
+      </a>
+
+      <div class="guarantee-row">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>30-day money-back guarantee — no questions asked</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ════════════════════════════════ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Questions</span>
+      <h2>Everything you want to know</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Is this for perimenopause too, or only post-menopause?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — the guide covers the full hormonal transition from early perimenopause through post-menopause. The hormonal mechanisms described (oestrogen fluctuation, insulin resistance, cortisol sensitivity) begin during perimenopause, often years before the final period. Many women see the greatest benefit by starting here early.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I've tried every diet. Why would this be different?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Because this is not a diet. It targets the five hormonal mechanisms that make standard diets ineffective during menopause. Calorie restriction without addressing oestrogen decline, insulin resistance, cortisol, sleep, and muscle loss simultaneously will keep producing partial results and plateaus. This guide goes to the biological root cause of all five at once.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I'm already on HRT. Is this still relevant?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Absolutely. HRT addresses oestrogen decline but doesn't fully reset metabolism, rebuild muscle mass, repair sleep architecture, or rebalance gut health. The guide works effectively alongside HRT — and includes guidance on integrating both approaches.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need expensive supplements or special foods?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No. The grocery list is built for a standard supermarket — no specialist health stores, no expensive supplements required. Everything is designed around real, accessible food and daily lifestyle changes that cost nothing.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What format is it? How do I receive it?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>The guide is a 203-page PDF, delivered via instant download link immediately after purchase. Readable on any phone, tablet, laptop, or e-reader — no app required. The tracker pages in Part VII are designed to print at home.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does the 30-day guarantee work?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>If you're not happy for any reason within 30 days of purchase, you receive a full refund — no questions, no forms, no waiting. Simply contact us through Gumroad. We're confident in this guide and want you to feel that confidence too before you commit.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ══════════════════════════ -->
+<section class="final-cta">
+  <h2>You don't need more willpower.<br><em>You need a plan built for now.</em></h2>
+  <p>Stop waiting for old strategies to start working again. Get the guide built for exactly the body you have at this stage of life.</p>
+  <a href="https://sarahresetmethod.gumroad.com/l/menopause-weight-loss-reset" class="btn-hero">
+    Yes — I want my reset →
+  </a>
+  <p class="final-price-note"><s>Regular price $69.00</s> &nbsp;·&nbsp; Today just $16.99 &nbsp;·&nbsp; Instant download</p>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <p>© 2026 The Menopause Weight Loss Reset &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Contact</a></p>
+  <p style="margin-top:8px">Results shown are individual and not guaranteed. This guide is for informational purposes and does not constitute medical advice. Always consult your physician before beginning any new diet or exercise programme.</p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Staggered entrance for grid cards and chapter items
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, i * 55);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll(
+    '.pain-card, .chapter-item, .mech-item, .testi-card, .bonus-card, .stat-cell'
+  ).forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
